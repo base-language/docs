@@ -1,0 +1,43 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Base",
+  "scopeName": "source.base",
+  "patterns": [
+    {
+      "name": "keyword.control.base",
+      "match": "\\b(let|const|if|else|for|while|function|return)\\b"
+    },
+    {
+      "name": "storage.type.base",
+      "match": "\\b(number|string|boolean|void|null|any|struct|interface)\\b"
+    },
+    {
+      "name": "constant.language.base",
+      "match": "\\b(true|false|null)\\b"
+    },
+    {
+      "name": "support.function.base",
+      "match": "\\b(print|printf|input|sum|avg|median|zip|unzip)\\b"
+    },
+    {
+      "name": "comment.line.double-slash.base",
+      "begin": "//",
+      "end": "$"
+    },
+    {
+      "name": "comment.block.base",
+      "begin": "/\\*",
+      "end": "\\*/"
+    },
+    {
+      "name": "string.quoted.double.base",
+      "begin": "\"",
+      "end": "\""
+    },
+    {
+      "name": "string.quoted.single.base",
+      "begin": "'",
+      "end": "'"
+    }
+  ]
+}

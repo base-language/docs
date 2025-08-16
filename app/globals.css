@@ -1,0 +1,188 @@
+@import "nextra-theme-docs/style.css";
+@import "tailwindcss";
+
+@variant dark (&:where(.dark *));
+
+html {
+  font-family: "Inter", system-ui !important;
+  scrollbar-gutter: stable !important;
+  scrollbar-width: thin !important;
+  scroll-behavior: smooth !important;
+  overflow-y: scroll !important;
+  overflow-x: hidden !important;
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+body {
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.4);
+  border-radius: 111px;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(100, 100, 100, 0.4) transparent;
+}
+
+.select-none {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.nextra-sidebar {
+  position: sticky;
+  z-index: 99998;
+  top: 62px;
+  left: 0px;
+  border-right-style: var(--tw-border-style);
+  border-right-width: 1px;
+  border-color: #d4d4d480;
+  --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)),
+    0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+  box-shadow: var(--tw-inset-shadow),
+    var(--tw-inset-ring-shadow),
+    var(--tw-ring-offset-shadow),
+    var(--tw-ring-shadow),
+    var(--tw-shadow);
+}
+
+html.dark .nextra-sidebar {
+  position: sticky;
+  z-index: 99998;
+  top: 62px;
+  left: 0px;
+  border-right-style: var(--tw-border-style);
+  border-right-width: 1px;
+  border-color: #26262680;
+  --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)),
+    0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+  box-shadow: var(--tw-inset-shadow),
+    var(--tw-inset-ring-shadow),
+    var(--tw-ring-offset-shadow),
+    var(--tw-ring-shadow),
+    var(--tw-shadow);
+}
+
+aside div div ul li[class="active"] a {
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  transition-property: scale, background-color, color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.005em;
+  padding-block: 8px;
+  padding-inline: 10px;
+  border: 1px solid #00000000;
+}
+
+aside div div ul li[class=""] a {
+  display: flex;
+  background-color: #00000000 !important;
+  flex-direction: row;
+  border-radius: 10px;
+  transition-property: scale, background-color, color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.005em;
+  padding-block: 8px;
+  padding-inline: 10px;
+  border: 1px solid #00000000;
+}
+
+li div ul li a {
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  background-color: #00000000;
+  transition-property: scale, background-color, color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.005em;
+  padding-block: 8px;
+  padding-inline: 10px;
+  border: 1px solid #00000000;
+}
+
+li a:hover {
+  border: 1px solid #26262680;
+  transition-property: scale, border-color, color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+li a:active {
+  scale: 0.989;
+  border: 1px solid #26262680;
+  transition-property: scale, border-color, color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+li.active a {
+  background-color: color-mix(in oklab, var(--color-neutral-800) 60%, transparent);
+  border: 1px solid #26262680;
+}
+
+.nextra-sidebar button {
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  transition-property: scale, background-color, color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.005em;
+  padding-block: 8px;
+  padding-inline: 10px;
+  border: 1px solid #00000000;
+}
+
+.nextra-sidebar li button:hover {
+  color: #e1e1e1;
+  border: 1px solid #26262680;
+  transition-property: scale, border-color, color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+.nextra-sidebar li.open button {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  border: 1px solid #26262680;
+  transition-property: scale, border-color, color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+div#headlessui-portal-root div ul {
+  z-index: 99998 !important;
+}
+
+/*button[data-href="/v0.0.1-alpha"] {
+  display: none;
+}*/

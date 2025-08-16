@@ -1,0 +1,49 @@
+{
+  "scopeName": "source.base",
+  "name": "Base",
+  "patterns": [
+    { "include": "#keywords" },
+    { "include": "#types" },
+    { "include": "#functions" },
+    { "include": "#comments" },
+    { "include": "#strings" }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "match": "\\b(let|const|if|else|for|while|function|return)\\b",
+          "name": "keyword.control.base"
+        }
+      ]
+    },
+    "types": {
+      "patterns": [
+        {
+          "match": "\\b(number|string|boolean|void|null|any|struct|interface)\\b",
+          "name": "storage.type.base"
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "match": "\\b(print|printf|input|sum|avg|median|zip|unzip)\\b",
+          "name": "support.function.base"
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        { "begin": "//", "end": "$", "name": "comment.line.double-slash.base" },
+        { "begin": "/\\*", "end": "\\*/", "name": "comment.block.base" }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        { "begin": "\"", "end": "\"", "name": "string.quoted.double.base" },
+        { "begin": "'", "end": "'", "name": "string.quoted.single.base" }
+      ]
+    }
+  }
+}
